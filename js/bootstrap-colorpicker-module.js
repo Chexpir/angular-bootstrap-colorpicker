@@ -434,6 +434,9 @@ angular.module('colorpicker.module', [])
               positionOffset.top = 0;
             }
 
+            positionOffset.left -= positionOffset.scrollX;
+            positionOffset.top -= positionOffset.scrollY;
+            
             if (position === 'top') {
               positionValue =  {
                 'top': positionOffset.top - 147,
